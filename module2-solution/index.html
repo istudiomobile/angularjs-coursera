@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="moduleOneApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Coursera Week 2</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <div ng-controller="toBuyController">
+        <h3>{{ toBuyListMsg }}</h3>
+        <ul>
+            <li ng-repeat="item in toBuyItems">Buy {{item.name}}, {{item.qty}}  <button ng-click="removeItem(item, $index)">Bought</button></li>
+        </ul>        
+    </div>
+    <div ng-controller="boughtController">
+        <h3 ng-if="boughtItems.length == 0">Nothing bought yet!</h3>
+        <ul>
+            <li ng-repeat="item in boughtItems">Bought {{item.name}}, {{item.qty}}</li>
+        </ul>
+
+    </div>
+</body>
+</html>
