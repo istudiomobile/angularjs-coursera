@@ -7,12 +7,10 @@
     .controller('toBuyController', ['sharingService', function(sharingService){
 
         //---- Variables ----
-        this.toBuyListMsg = "To Buy:";
         this.toBuyItems = sharingService.toBuyItems;        
 
         //---- Methods ----
         this.removeItem = function(item, index){
-            this.toBuyItems.length != 1 ? this.toBuyListMsg = "To Buy:" : this.toBuyListMsg = "Everything is bought!";
             sharingService.removeItem(item, index);
         };
 
