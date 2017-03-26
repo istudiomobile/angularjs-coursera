@@ -14,7 +14,8 @@
 </head>
 <body>
     <div ng-controller="toBuyController">
-        <h3>{{ toBuyListMsg }}</h3>
+        <h3>Already bought:</h3>
+        <h4>{{ toBuyListMsg }}</h4>
         <ul>
             <li ng-repeat="item in toBuyItems">Buy {{item.name}}, {{item.qty}}  <button ng-click="removeItem(item, $index)">Bought</button></li>
         </ul>        
