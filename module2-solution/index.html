@@ -13,17 +13,17 @@
 
 </head>
 <body>
-    <div ng-controller="toBuyController">
-        <h4>{{ toBuyListMsg }}</h4>
+    <div ng-controller="toBuyController as ctrl1">
+        <h4>{{ ctrl1.toBuyListMsg }}</h4>
         <ul>
-            <li ng-repeat="item in toBuyItems">Buy {{item.name}}, {{item.qty}}  <button ng-click="removeItem(item, $index)">Bought</button></li>
+            <li ng-repeat="item in ctrl1.toBuyItems">Buy {{item.name}}, {{item.qty}}  <button ng-click="ctrl1.removeItem(item, $index)">Bought</button></li>
         </ul>        
     </div>
-    <div ng-controller="boughtController">
+    <div ng-controller="boughtController as ctrl2">
         <h3>Already bought:</h3>
-        <h3 ng-if="boughtItems.length == 0">Nothing bought yet!</h3>
+        <h3 ng-if="ctrl2.boughtItems.length == 0">Nothing bought yet!</h3>
         <ul>
-            <li ng-repeat="item in boughtItems">Bought {{item.name}}, {{item.qty}}</li>
+            <li ng-repeat="item in ctrl2.boughtItems">Bought {{item.name}}, {{item.qty}}</li>
         </ul>
 
     </div>

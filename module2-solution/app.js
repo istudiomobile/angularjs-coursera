@@ -4,25 +4,25 @@
 
     angular.module('moduleOneApp', [])
     
-    .controller('toBuyController', ['$scope', 'sharingService', function($scope, sharingService){
+    .controller('toBuyController', ['sharingService', function(sharingService){
 
         //---- Variables ----
-        $scope.toBuyListMsg = "To Buy:";
-        $scope.toBuyItems = sharingService.toBuyItems;        
+        this.toBuyListMsg = "To Buy:";
+        this.toBuyItems = sharingService.toBuyItems;        
 
         //---- Methods ----
-        $scope.removeItem = function(item, index){
-            $scope.toBuyItems.length != 1 ? $scope.toBuyListMsg = "To Buy:" : $scope.toBuyListMsg = "Everything is bought!";
+        this.removeItem = function(item, index){
+            this.toBuyItems.length != 1 ? this.toBuyListMsg = "To Buy:" : this.toBuyListMsg = "Everything is bought!";
             sharingService.removeItem(item, index);
         };
 
     }])
 
-    .controller('boughtController', ['$scope', 'sharingService', function($scope, sharingService){
+    .controller('boughtController', ['sharingService', function(sharingService){
 
-        //---- Variables ---- 
-        $scope.boughtListMsg = sharingService.boughtListMsg;       
-        $scope.boughtItems = sharingService.boughtItems;
+        //---- Variables ----
+        this.boughtListMsg = sharingService.boughtListMsg;       
+        this.boughtItems = sharingService.boughtItems;
         
 
     }])
