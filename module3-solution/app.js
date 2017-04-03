@@ -12,7 +12,11 @@
         //---- Methods ----
         vm.searchForDescription = function(description){
             MenuSearchService.getMatchedMenuItems(description).then(function(items){
-                vm.foundItems = items;
+                if(items.length){
+                    vm.foundItems = items;
+                } else {
+                    vm.foundItems[0] = "Nothing found!";
+                }
             });            
         };
 
