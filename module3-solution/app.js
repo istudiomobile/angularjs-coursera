@@ -8,14 +8,16 @@
 
         //---- Variables ----
         var vm = this;
+        vm.foundItems = [];
 
         //---- Methods ----
         vm.searchForDescription = function(description){
             MenuSearchService.getMatchedMenuItems(description).then(function(items){
-                if(items.length > 0){
+                if(items.length !== 0){
                     vm.foundItems = items;
                 } else {
-                    vm.foundItems[0] = "Nothing found!";
+                    vm.foundItems.push({description: "Nothing found!"});
+                    console.log(vm.foundItems);
                 }
             });            
         };
