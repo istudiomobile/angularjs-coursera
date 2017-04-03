@@ -17,7 +17,6 @@
                     vm.foundItems = items;
                 } else {
                     vm.foundItems.push({description: "Nothing found!"});
-                    console.log(vm.foundItems);
                 }
             });            
         };
