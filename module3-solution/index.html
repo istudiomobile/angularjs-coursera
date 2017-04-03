@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NarrowItDownApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Coursera Week 2</title>
+
+    <!-- Twitter Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-controller="NarrowItDownController as vm">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <form>
+                    <div class="form-group">
+                        <label for="searchInput">Enter your description!</label>
+                        <input type="text" class="form-control" id="searchInput" ng-model="vm.description" placeholder="...enter search description here..." ><br/>
+                        <button type="submit" class="btn btn-default"  ng-click="vm.searchForDescription(vm.description)">Narrow It Down For Me!</button>
+                    </div>
+                </form>
+                                
+            </div>
+        </div>
+        <div class="row">
+            <found-items items="vm.foundItems" on-remove="vm.removeItem(index)"></found-items>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
