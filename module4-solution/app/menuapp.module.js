@@ -10,7 +10,7 @@
 
         .state('home', {
             url: '/home',
-            component: 'Home',
+            component: 'home',
             resolve:{
                 items:['MenuDataService', function(MenuDataService){
                     return MenuDataService.getAllCategories();
@@ -26,8 +26,7 @@
 
         .state('home.categories', {
             url: '/categories',
-            templateUrl: 'categories/categories.html',
-            controller: 'CategoriesCtrl as catgy',
+            component: 'categories',
             onEnter: function(MenuDataService){
                 MenuDataService.set_menu_state('categories', true);
             },

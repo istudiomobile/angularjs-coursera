@@ -1,9 +1,9 @@
 (function(){
     'use strict';
     angular.module('menuapp')
-    .component('Home', {
+    .component('home', {
         templateUrl: 'home/home.html',
-        controller: function HomeCtrl(){
+        controller: function HomeController(){
 
             /*---- Variables ----*/
             var home = this;
