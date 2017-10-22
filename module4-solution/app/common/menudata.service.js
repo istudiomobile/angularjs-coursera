@@ -4,7 +4,6 @@
     .service('MenuDataService', ['$http', function($http){
 
         this.state = {home: false, categories: false, detail: false};
-        this.test = 5;
 
         this.getAllCategories = function(){
             return $http({

@@ -5,6 +5,8 @@
         templateUrl: 'categories/categories.html',
         controller: function CategoriesController(){
             
+            
+
         }
     });
 }());
