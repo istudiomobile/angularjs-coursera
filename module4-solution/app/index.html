@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="menuapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coursera Week 4</title>
+
+    <!--  Bootstrap Styles  -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+
+    <ui-view></ui-view>
+
+ <!-- jQuery -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<!-- Angular and Dependencies -->
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Angular modules definition -->
+<script src="data.module.js"></script>
+<script src="menuapp.module.js"></script>
+<!-- Components -->
+<script src="home/home.component.js"></script>
+<script src="categories/categories.controller.js"></script>
+<script src="detail/detail.controller.js"></script>
+<!-- Services -->
+<script src="common/menudata.service.js"></script>
+</body>
+</html>
