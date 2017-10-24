@@ -4,7 +4,7 @@
     .component('home', {
         bindings: { items: '<'},
         templateUrl: 'home/home.html',
-        controller: function HomeController(MenuDataService){
+        controller: function (MenuDataService){
 
             /*---- Variables ----*/
             var home = this;
