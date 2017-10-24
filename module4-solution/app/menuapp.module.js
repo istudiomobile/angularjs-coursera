@@ -35,10 +35,14 @@
             }
         })
         
-        .state('detail', {
-            url: '/detail',
-            templateUrl: 'detail/detail.html',
-            controller: 'DetailCtrl as detail',
+        .state('home.detail', {
+            url: '/:categoryShortName',
+            component: 'detail',
+            resolve:{
+                shortName: function($transition$, MenuDataService){
+                    return MenuDataService.getItemsForCategory($transition$.params().categoryShortName);
+                }
+            },
             onEnter: function(MenuDataService){
                 MenuDataService.set_menu_state('detail', true);
             },
