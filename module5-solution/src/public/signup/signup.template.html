@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form name="signupForm" ng-submit="SignUpCtrl.signUp(signupForm.$valid)" novalidate>
+            <div class="form-group">
+                <label for="firstname">First name</label>
+                <input type="password" class="form-control" name="firstname" id="firstname" placeholder="...first name." ng-model="signupFormData.firstname" minlength="1" maxlength="20" required>                
+                <span class="help-block" ng-if="(signupForm.firstname.$error.minlength || signupForm.firstname.$error.required) && signupForm.firstname.$touched">Required field.</span>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last name</label>
+                <input type="password" class="form-control" name="lastname" id="lastname" placeholder="Required field. 30 characters max" ng-model="signupFormData.lastname" minlength="1" maxlength="20" required>
+                <span class="help-block" ng-if="(signupForm.firstname.$error.minlength || signupForm.firstname.$error.required) && signupForm.firstname.$touched">Required field.</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Valid Email format" ng-model="signupFormData.email" required>
+                <span class="help-block" ng-if="(signupForm.email.$invalid) && signupForm.email.$touched">Required field. Valid email address.</span>
+            </div>            
+            <div class="form-group">
+                <label for="phonenum">Phone number</label>
+                <input type="text" class="form-control" name="phonenum" id="phonenum" placeholder="10 digit number. No spaces, no dashes." ng-model="signupFormData.phonenum" required>
+                <span class="help-block" ng-if="(signupForm.firstname.$error.minlength || signupForm.firstname.$error.required) && signupForm.firstname.$touched">Required field. 30 characters max.</span>
+            </div>
+            <div class="form-group">
+                <label for="favdishnum">Favorite dish number</label>
+                <input type="text" class="form-control" name="favdishnum" id="favdishnum" placeholder="...your favorite dish number." ng-model="signupFormData.dishnum">
+            </div>
+            <span class="help-block">{{ signupForm.$valid }}</span>
+            <button type="submit" class="btn btn-default">Sign up</button>
+        </form>
+    </div>
+</div>
