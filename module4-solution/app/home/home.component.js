@@ -3,7 +3,7 @@
     angular.module('menuapp')
     .component('home', {
         bindings: { items: '<'},
-        templateUrl: 'home/home.html',
+        templateUrl: 'home/home.template.html',
         controller: function (MenuDataService){
 
             /*---- Variables ----*/

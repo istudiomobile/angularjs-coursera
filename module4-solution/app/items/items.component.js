@@ -2,9 +2,9 @@
     'use strict',
 
     angular.module('menuapp')
-    .component('detail', {
+    .component('items', {
         bindings: {shortName: '<'},
-        templateUrl: 'detail/detail.html',
+        templateUrl: 'items/items.template.html',
         controller: function(){
             
         }

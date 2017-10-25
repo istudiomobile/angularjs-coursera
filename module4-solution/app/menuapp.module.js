@@ -35,19 +35,19 @@
             }
         })
         
-        .state('home.detail', {
+        .state('home.items', {
             url: '/:categoryShortName',
-            component: 'detail',
+            component: 'items',
             resolve:{
                 shortName: function($transition$, MenuDataService){
                     return MenuDataService.getItemsForCategory($transition$.params().categoryShortName);
                 }
             },
             onEnter: function(MenuDataService){
-                MenuDataService.set_menu_state('detail', true);
+                MenuDataService.set_menu_state('items', true);
             },
             onExit:function(MenuDataService){
-                MenuDataService.set_menu_state('detail', false);
+                MenuDataService.set_menu_state('items', false);
             }
         });
 
