@@ -15,7 +15,7 @@
         this.getItemsForCategory = function(category){
             return $http({
                 method: 'GET',
-                url: `https://davids-restaurant.herokuapp.com/menu_items.json?category=${category}`
+                url: 'https://davids-restaurant.herokuapp.com/menu_items.json?category=' + category
             });
         };
 
