@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="alert alert-danger" role="alert" ng-show="userinfo.flag"><p>Not Signed Up Yet. Sign up Now!</p></div>
+        <div class="panel panel-default">
+            <div class="panel-body" style="color:black">
+                User Info
+            </div>
+        </div>
+        <ul class="list-group" style="color:black">
+            <li class="list-group-item">Name: {{ userinfo.username }}</li>
+            <li class="list-group-item">Last name: {{ userinfo.lastname }}</li>
+            <li class="list-group-item">Email: {{ userinfo.email }}</li>
+            <li class="list-group-item">Phone: {{ userinfo.phone }}</li>
+            <li class="list-group-item">Favorite dish: {{ userinfo.dishnum }}</li>
+        </ul>
+        <img src="http://lorempixel.com/200/200/food" alt="..." class="img-rounded">
+    </div>
+</div>

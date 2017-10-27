@@ -27,6 +27,13 @@ function MenuService($http, ApiPath) {
     });
   };
 
+  service.signUp = function(short_name){
+    return $http.get('https://istudiomobile.herokuapp.com/menu_items/' + short_name + '.json');
+  };
+
+  //---- User Info ----
+  service.userInfo = {first_name: '', last_name: '', email: '', phone_num: '', dish_num: ''};
+
 }
 
 
