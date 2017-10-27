@@ -32,7 +32,7 @@ function MenuService($http, ApiPath) {
   };
 
   //---- User Info ----
-  service.userInfo = {first_name: '', last_name: '', email: '', phone_num: '', dish_num: ''};
+  service.userInfo = {first_name: '', last_name: '', email: '', phone_num: '', dish_num: '', description: '', image_url: ''};
 
 }
 

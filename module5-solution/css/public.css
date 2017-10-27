@@ -113,6 +113,19 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* SIGNUP PAGE AND USER INFO STYLES */
+span.help-block {
+  color: #fff;
+}
+
+div.panel-body {
+  color: #000000;
+}
+
+ul.list-group li {
+  color: #000000;
+}
+
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {

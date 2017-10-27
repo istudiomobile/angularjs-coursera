@@ -3,12 +3,12 @@
         <form name="signupForm" ng-submit="signup.signUp(signupForm.$valid)" novalidate>
             <div class="form-group">
                 <label for="firstname">First name</label>
-                <input type="password" class="form-control" name="firstname" id="firstname" placeholder="...first name." ng-model="signup.signupFormData.firstname" minlength="1" maxlength="20" required>                
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="...first name." ng-model="signup.signupFormData.firstname" minlength="1" maxlength="20" required>                
                 <span class="help-block" ng-if="(signupForm.firstname.$error.minlength || signupForm.firstname.$error.required) && signupForm.firstname.$touched">Required field.</span>
             </div>
             <div class="form-group">
                 <label for="lastname">Last name</label>
-                <input type="password" class="form-control" name="lastname" id="lastname" placeholder="Required field. 30 characters max" ng-model="signup.signupFormData.lastname" minlength="1" maxlength="20" required>
+                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Required field. 30 characters max" ng-model="signup.signupFormData.lastname" minlength="1" maxlength="20" required>
                 <span class="help-block" ng-if="(signupForm.firstname.$error.minlength || signupForm.firstname.$error.required) && signupForm.firstname.$touched">Required field.</span>
             </div>
             <div class="form-group">
@@ -22,7 +22,7 @@
                 <span class="help-block" ng-show="signupForm.phonenum.$error.pattern">Required field. 30 characters max.</span>
             </div>
             <div class="form-group">
-                <label for="favdishnum">Favorite dish number</label>
+                <label for="favdishnum">Favorite dish number by category (A1...A11, L1...L28, SP1...SP8, CM1...CM5, etc.)</label>
                 <input type="text" class="form-control" name="favdishnum" id="favdishnum" placeholder="...your favorite dish number." ng-model="signup.signupFormData.dishnum">
             </div>
             <!-- <span class="help-block">{{ signupForm.$valid }}</span> -->
