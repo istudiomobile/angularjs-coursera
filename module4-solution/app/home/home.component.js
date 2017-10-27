@@ -6,6 +6,9 @@
         templateUrl: 'home/home.template.html',
         controller: function (MenuDataService){
 
+            //---- NOTE: Don't get confused here!!! Not using the service to pull data in.
+            //---- It is used to keep location state only!!!
+
             /*---- Variables ----*/
             var home = this;
             this.state = MenuDataService.state;
