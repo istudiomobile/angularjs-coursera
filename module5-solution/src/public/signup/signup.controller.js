@@ -32,7 +32,7 @@
             MenuService.userInfo.phone_num = signup.signupFormData.phonenum;
             MenuService.userInfo.dish_num = response.data.name;
             MenuService.userInfo.description = response.data.description;
-            MenuService.userInfo.image_url = './images/menu/' + signup.buildImageUrl(signup.signupFormData.dishnum.toUpperCase()) + '/' + signup.buildImageUrl(signup.signupFormData.dishnum.toUpperCase()) + '.jpg';
+            MenuService.userInfo.image_url = './angularjs-coursera/module5-solution/images/menu/' + signup.buildImageUrl(signup.signupFormData.dishnum.toUpperCase()) + '/' + signup.buildImageUrl(signup.signupFormData.dishnum.toUpperCase()) + '.jpg';
         };
 
         signup.buildImageUrl = function(dishname){
